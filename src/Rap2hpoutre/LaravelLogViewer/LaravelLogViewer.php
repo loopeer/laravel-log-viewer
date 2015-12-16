@@ -150,7 +150,7 @@ class LaravelLogViewer
             foreach ($files as $k => $file) {
                 $start = strrpos($file, 'logs/') + 5;
                 $file = substr($file, $start);
-                $files[$k] = basename($file);
+                $files[$k] = $file;
             }
         }
         return array_values($files);
